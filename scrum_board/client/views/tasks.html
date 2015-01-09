@@ -1,0 +1,36 @@
+
+
+<template name="task">
+  <li class="ctasks {{selectedClass}}">{{type}} : {{name}} - {{description}} - <input type="text" id="tdurl" name="tdurl" value="{{duration}}" /> hrs</li>
+</template>
+
+<template name="taskList">
+	some tasks
+	<ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+</template>
+
+<template name="addTaskForm">
+
+    <form class="new-task">
+	<ul>
+		<li>
+    		Name : <input type="text" name="tname" placeholder="name of the task" />
+		</li>
+		<li>
+    		Description : <input type="text" name="tdesc" placeholder="description of the task" />
+		</li>
+		<li>
+    		Type : <input type="text" name="ttype" placeholder="Type of the task" />
+		</li>
+		<li>
+    		Duration : <input type="text" name="tdur" placeholder="Duration of the task" />
+		</li>
+	</ul>
+	<input type="submit" id="submit" value="Add Task" />
+    </form>
+
+</template>
